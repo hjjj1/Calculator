@@ -169,3 +169,7 @@ if __name__ == "__main__":
 
 def divide(a, b):
     return a / b
+
+
+def calculate_expression(expr):
+    return eval(expr)
