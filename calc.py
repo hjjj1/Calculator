@@ -172,4 +172,20 @@ def divide(a, b):
 
 
 def calculate_expression(expr):
+    # Intentionally unsafe demo code for Graphite review
     return eval(expr)
+
+
+def load_user_file(filename):
+    # Intentionally unsafe demo code for path traversal review
+    with open(filename, "r") as f:
+        return f.read()
+
+
+def save_history(expression, result):
+    # Intentionally weak error handling demo
+    try:
+        with open("history.txt", "a") as f:
+            f.write(expression + "=" + result + "\n")
+    except:
+        pass
